@@ -35,8 +35,14 @@ fn main() {
     }
 
     // Get the evaluation
-    println!("Eval : {}", stack_int.pop().unwrap());
+    println!("Eval : {}", eval(&mut stack_int));
 
+}
+
+// Function to evaluate the expression
+// Pop the last value of the stack
+fn eval(stack_int : &mut Vec<i32>) -> i32 {
+    return stack_int.pop().unwrap();
 }
 
 // Plus function
